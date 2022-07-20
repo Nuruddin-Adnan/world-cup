@@ -53,6 +53,7 @@ body {
     border-radius: 15px;
     padding: 0 100px;
     display: flex;
+    overflow: hidden;
 }
 
 .banner-content .text {
@@ -103,6 +104,41 @@ body {
 
 .banner-content img {
     width: 100%;
+    animation: football 10s cubic-bezier(0.13, 0.46, 0.51, 1.04);
+}
+
+@keyframes football {
+    0% {
+        transform: translate(200px, -200px) scale(0) rotate(-45deg);
+    }
+
+    20% {
+        transform: translate(0px, 0px) scale(1) rotate(0deg)
+    }
+
+    40% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    60% {
+        transform: translateY(10px);
+    }
+
+    70% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* ===== end of banner css ===== */
@@ -164,6 +200,12 @@ body {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.2s linear;
+}
+
+.blog-item:hover {
+    border-color: rgba(221, 0, 0, 0.5);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .blog-item .blog-thumbnail img {
@@ -250,6 +292,12 @@ body {
     border-radius: 10px;
     padding: 30px 20px;
     text-align: center;
+    transition: all 0.2s linear;
+}
+
+.upcomming-match-item:hover {
+    border-color: rgba(221, 0, 0, 0.5);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .upcomming-match-item .team-banner {
